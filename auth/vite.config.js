@@ -2,19 +2,19 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "app",
-      remotes: {
-        remoteApp: "http://localhost:5001/assets/remoteEntry.js",
-        loginApp: "http://localhost:5002/assets/remoteEntry.js",
+      name: "Login_app",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./LoginApp": "./src/components/Login",
       },
       shared: ["react", "react-dom"],
     }),
   ],
+ 
   build: {
     modulePreload: true,
     target: "esnext",

@@ -4,13 +4,15 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 import HomeApp from "remoteApp/HomeApp";
+import LoginApp from "loginApp/LoginApp";
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <h2>host</h2>
+     
       <HomeApp />
+      <LoginApp/>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
