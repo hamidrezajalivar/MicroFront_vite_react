@@ -1,16 +1,15 @@
-
-import './App.css'
-import Button from './Button'
+import "./App.css";
+import Button from "./Button";
+import Header from "./components/Header";
 
 function App() {
-
-
   return (
- <>
-    <h2>Remote</h2>
-    <Button/>
+    <>
+      <Header />
+      <h2>Remote</h2>
+      <Button />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
